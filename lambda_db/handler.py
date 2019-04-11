@@ -9,5 +9,9 @@ def spatial_query(event, context):
         response = db.spatial_query(data['geoj'])
         return {
             'statusCode': 200,
-            'body': json.dumps(response)
+            'body': json.dumps(response),
+            'headers': {
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Credentials': True,
+            }
         }
