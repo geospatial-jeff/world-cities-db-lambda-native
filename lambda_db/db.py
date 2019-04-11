@@ -1,10 +1,4 @@
 import os
-import sys
-from multiprocessing import Process, Pipe
-s2_path = '/home/slingshot/Documents/Cognition/notebooks/s2/source/s2geometry/build/python'
-
-if s2_path not in sys.path:
-    sys.path.append(s2_path)
 
 import pywraps2 as s2
 from ZODB import FileStorage, DB
